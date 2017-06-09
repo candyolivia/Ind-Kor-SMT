@@ -1,0 +1,9 @@
+hari
+minggu
+bulan
+tahun
+abad
+jam
+menit
+detik
+windu

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phase Based Indonesia - Korea SMT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header center-block">
+      <h1>Phrase Based Indonesia - Korea SMT</h1>
+      <h4>Machine Translation for Translating Text or File</h4>
+    </div>
+    <form method="POST" enctype=multipart/form-data>
+      <div>
+          <select name="lang">
+            <option value="idkr">ID-KR</option>
+            <option value="krid">KR-ID</option>
+          </select>
+          <span class="btn-group">
+              <button type="submit" class="btn btn-info">Translate</button>
+          </span>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="fileinput fileinput-new">
+                <span class="btn btn-default btn-file">
+                    <input type="file" name = "file">
+                </span>
+                <a href="idkr"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phase Based Indonesia - Korea SMT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header center-block">
+      <h1>Phrase Based Indonesia - Korea SMT</h1>
+      <h4>Machine Translation for Translating Text or Document</h4>
+    </div>
+    <div>
+        <span class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="lang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                ID - KR
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="language">
+                {% for l in lang %}
+                    <li><a href="#">{{l}}</a></li>
+                {% endfor %}
+            </ul>
+        </span>
+        <!-- <span class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Baseline
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="method">
+                {% for m in method %}
+                    <li><a href="#">{{m}}</a></li>
+                {% endfor %}
+            </ul>
+        </span> -->
+        <span class="btn-group">
+            <button type="button" class="btn btn-info">Translate</button>
+        </span>
+    </div>
+    <br>
+
+    {% if text %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <textarea class="form-control" rows="7" id="source"></textarea>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <textarea class="form-control" rows="7" id="target" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            Type text or <a href="#">translate a document</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="fileinput fileinput-new">
+                <span class="btn btn-default btn-file">
+                    <input type="file">
+                </span>
+                <a href="#"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>

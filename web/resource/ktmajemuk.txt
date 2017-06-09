@@ -1,0 +1,159 @@
+salah_satu CD 11
+lagi_pula CC 1
+lapangan_kerja NN 2
+luar_biasa JJ 2
+bank_umum NN 1
+Bahan_Bakar NN 1
+sebagian_besar NN 3
+musim_kering NN 1
+makan_malam NN 3
+uang_tunai NN 1
+manajemen_risiko NN 2
+kondisi_kesehatan NN 1
+modal_kerja NN 1
+hulu_sungai NN 1
+perusahaan_swasta NN 1
+guru_besar NN 1
+nilai_nominal NN 2
+luar_negeri NNP 1 NN 11
+minyak_mentah NN 5
+indeks_harga NNP 1
+Tahun_Baru NNP 1
+izin_usaha NN 6
+mencari_tahu VB 1
+bahan_bakar NN 2
+pertumbuhan_ekonomi NN 30
+akuntan_publik NN 1
+dini_hari JJ 3
+jangan_sampai RB 1
+bahan_makanan NN 1
+lampu_hijau NN 1
+memegang_peranan VB 1
+kantor_berita NNP 4
+1927: neraca_pembayaran NN 3
+2004: dalam_negeri JJ 5 NN 4
+2029: kerja_sama NN 9
+2033: saksi_mata NN 1
+2043: bekerja_sama VB 1
+2077: perbendaharaan_negara NN 1
+2129: Rapat_Kerja NN 4
+2155: jatuh_tempo VB 12 NN 2
+2163: di_bawah VB 3
+2181: kendaraan_bermotor NN 2
+2188: modal_asing NN 1
+2250: dampak_positif NN 2
+2443: ke_50 OD 1
+2496: pelaku_pasar NN 4
+2549: bantuan_teknis NN 1
+2571: tanda_terima NN 1
+2653: negara_maju NN 2
+2676: sama_sekali RB 2
+2683: manajemen_proyek NN 1
+2718: mitra_bisnis NN 1
+2750: alas_kaki NN 1
+2802: penggundulan_hutan NN 1
+2913: jalan_tol NN 1
+2978: pangsa_pasar NN 2
+3012: atas_nama NN 3
+3123: surat_kabar NN 1
+3124: curah_hujan NN 2
+3184: sumber_daya NN 2
+3315: pesta_olahraga NN 1
+3318: rancang_bangun NN 1
+3331: pasar_modal NN 6
+3485: rumah_tangga NN 2
+3489: Luar_Negeri NN 1
+3576: siaran_pers NN 3
+3618: jangka_panjang NN 3
+3660: negara_bagian NNP 1 NN 1
+3748: kepastian_hukum NN 1
+3790: berkembang_biak VB 1
+3822: sepak_bola NN 2
+3838: dasar_laut NN 1
+3894: bea_masuk NN 1
+3955: ekspansi_kredit NN 1
+3988: menempatkan_diri VB 1
+4003: kelompok_tani NN 1
+4067: seminimal_mungkin RB 2
+4117: bencana_alam NN 1
+4124: mendaur_ulang VB 1
+4132: surat_izin NN 1
+4155: perdana_menteri NN 3
+4209: pelaku_bisnis NN 2
+4255: ikut_sertanya NN 1
+4308: laporan_keuangan NN 3
+4311: menarik_diri VB 1
+4316: harga_jual NN 4
+4368: pengolahan_data NN 1
+4375: penanaman_modal NN 1
+4514: peti_kemas NN 1
+4520: siapa_pun SC 1
+4542: usaha_patungan NN 1
+4643: lebih_jauh JJ 1
+4658: batu_bara NN 6
+4675: akhir_pekan NN 3
+4688: jangka_pendek NN 3
+4696: pesawat_terbang NN 1
+4795: kesehatan_masyarakat NN 1
+4857: pihak_ketiga NN 3
+4922: reformasi_ekonomi NN 1
+4945: ikut_serta VB 1
+5118: salah_seorang CD 3
+5232: mata_kaki NN 1
+5265: bahan_baku NN 1
+5328: buta_aksara JJ 1
+5341: kurun_waktu NN 1
+5464: jumpa_pers NN 2
+5491: pasar_uang NN 2
+5548: orang_tua NN 1
+5566: rapat_kerja NN 5
+5634: pemberian_fasilitas NN 1
+5640: terima_kasih NN 1
+5669: tindak_lanjut NN 1
+5706: kelapa_sawit NN 1
+5717: demam_berdarah NN 1
+5723: air_bersih NN 2
+5745: orang_kaya NN 1
+5752: hubungan_dagang NN 1
+5807: bertanggung_jawab VB 2
+5816: laba_kotor NN 2
+5970: kantor_cabang NN 1
+6094: Luar_Biasa JJ 2
+6156: ke_depan RB 4
+6159: kapal_tanker NN 4
+6164: baru-baru_ini RB 3
+6177: kantor_perwakilan NN 1
+6184: Pesta_Olahraga NNP 1
+6188: di_mana SC 7
+6215: anak_perusahaan NN 14
+6271: pendapatan_bersih NN 1
+6275: pemegang_saham NN 12
+6281: tertangkap_basah VB 1
+6299: pembangunan_sosial NN 1
+6351: jual_beli NN 3
+6407: lemari_besi NN 1
+6412: daya_beli NN 1
+6420: laba_bersih NN 23
+6422: bahasa_sehari-hari NN 1
+6495: kebijakan_moneter NN 2
+6561: mata_uang NN 14
+6569: arus_kas NN 1
+6595: gas_alam NN 2
+6693: pembangunan_ekonomi NN 2
+6723: angka_akhir NN 1
+6743: pemerintah_pusat NN 3
+6776: Bank_Sentral NNP 1
+6800: kunjungan_kerja NN 2
+6887: industri_otomotif NN 1
+6932: juru_bicara NNP 1 NN 3
+6942: bank_sentral NN 5
+6962: tanggung_jawab NN 1
+7023: barang_modal NN 2
+7036: terang_bulan JJ 1
+7060: latar_belakang NN 1
+7069: penegak_hukum NN 1
+7245: tenaga_listrik NN 1
+7276: pesepak_bola NN 1
+7306: nilai_tukar NN 24
+7350: insya_Allah UH 1
+7382: majelis_rendah NN 1
