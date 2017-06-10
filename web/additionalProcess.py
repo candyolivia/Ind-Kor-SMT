@@ -400,7 +400,6 @@ class Additional():
 		words = sentence.split(" ")
 		postag = self.getOnlyPostagID(sentence.strip())
 		order = "-1"
-		# print postag
 		if postag in self.idtags:
 			order = self.idorders[self.idtags.index(postag)]
 
@@ -408,14 +407,12 @@ class Additional():
 				order = order.replace(" " + str(i+1) + " ", " " + words[i]+ " ")
 		else:
 			order = sentence.strip()
-		# print order
 		return order
 
 	def reorderKorea(self,sentence):
 		words = sentence.strip().split(" ")
 		postag = self.getOnlyPostagKR(sentence.strip())
 		order = "-1"
-		# print postag
 		if postag in self.krtags:
 			order = self.krorders[self.krtags.index(postag)]
 
@@ -423,7 +420,6 @@ class Additional():
 				order = order.replace(" " + str(i+1) + " ", " " + words[i]+ " ")
 		else:
 			order = sentence.strip()
-		# print order
 		return order
 
 	def reversePhrase(self,string):
@@ -450,7 +446,6 @@ class Additional():
 						result += self.reversePhrase(trans) + " "
 					else:
 						result += trans.strip() + " "
-				# print inp, result
 		return result
 
 	def translateReorderedKRID(self,inp,reorderedSentence):
@@ -469,28 +464,4 @@ class Additional():
 						result += self.reversePhrase(trans) + " "
 					else:
 						result += trans.strip() + " "
-				# print inp, result
 		return result
-
-
-# a = Additional()
-# string = "Ayo menonton film"
-# data = a.reorderIndonesia(string)
-# try:
-# 	trans = a.translateReorderedIDKR(string,data).replace("  ", "").replace("%","")
-# 	print trans
-# except Exception, e:
-# 	print a.translateReorderedIDKR(string,data).replace("  ", "").decode("utf-8").replace("%","")+"\n"
-# final = a.postTranslate(0,trans)
-# print a.transIndNE(final)
-
-# inp = "어 혜진 아"
-# data = a.reorderKorea(inp)
-# try:
-# 	trans = a.translateReorderedKRID(inp,data).replace("  ", "").replace("%","")
-# 	# print trans
-# except Exception, e:
-# 	trans = a.translateReorderedKRID(inp,data).replace("  ", "").decode("utf-8").replace("%","")
-# 	# print trans
-
-# print a.transKorNE(a.postTranslate(1,trans))
