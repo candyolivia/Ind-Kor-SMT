@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 import sys, re
 from collections import defaultdict
@@ -37,7 +37,7 @@ class Translator():
 		return splitSentenceToMorphsMecab(line)
 
 	def translateIDKR(self, input):
-		finalTranslationProbability = "../final/baseline/bukusubtitle/finalTranslationProbabilitySourceGivenTarget.txt"
+		finalTranslationProbability = "model/bukusubtitle/finalTranslationProbabilitySourceGivenTarget.txt"
 		punctuation = string.punctuation
 		punctuation = punctuation.replace("-","").replace("|","")
 		tp = defaultdict(dict)
@@ -48,7 +48,7 @@ class Translator():
 			line[1] = line[1].translate(string.maketrans("",""), punctuation)
 			tp[line[0]][line[1]] = float(line[2])
 		f.close()
-		
+
 		data=[]
 
 		translationScore = defaultdict(int)
@@ -75,46 +75,32 @@ class Translator():
 			if translation!='':
 				translationSentence[count].append(translation)
 				phrases[count].append(translatephrase)
-				
+
 			count+=1
 
 		if len(translationScore) != 0:
 			index = max(translationScore.iteritems(), key=operator.itemgetter(1))[0]
 			finalTranslation = ' '.join(translationSentence[index])
-			# finalTranslation = finalTranslation.decode("utf-8")
 			finalTranslatePhrase = ' '.join(phrases[index])
-			# words = line.strip().encode("utf-8").split(' ')
 			words = input.strip().split(' ')
 			finalTranslationWords = finalTranslation.strip().split('% ')
 			for i, word in enumerate(words):
 				tmp = []
 				if word not in finalTranslatePhrase:
 					tmp.extend(finalTranslationWords[:i])
-					# tmp.append(word + "%")
 					tmp.append(word + "%")
 					tmp.extend(finalTranslationWords[i:])
-					# print tmp
 					finalTranslationWords = tmp
-					# finalTranslation += " " + word
 			finalTranslation = ""
 			for word in finalTranslationWords:
 				finalTranslation += word.decode("utf-8").strip() + " "
 		else:
 			finalTranslation = input.strip()
-		
 		data.append(finalTranslation.strip().replace("  "," "))
-
-		# f = codecs.open('translation.txt',"w","utf-8")
-		# # f = open('translation.txt',"w")
-		# for line in data:
-		# 	# print line
-		# 	f.write(line.decode("utf-8") + "\n")
-		# f.close()
-
 		return finalTranslation.strip().replace("  "," ").replace("%%","%")
 
 	def translateKRID(self, input):
-		finalTranslationProbability = "../final/baseline/bukusubtitle/finalTranslationProbabilityTargetGivenSource.txt"
+		finalTranslationProbability = "model/bukusubtitle/finalTranslationProbabilityTargetGivenSource.txt"
 		punctuation = string.punctuation
 		punctuation = punctuation.replace("-","").replace("|","")
 		tp = defaultdict(dict)
@@ -125,7 +111,7 @@ class Translator():
 			line[1] = line[1].translate(string.maketrans("",""), punctuation)
 			tp[line[0]][line[1]] = float(line[2])
 		f.close()
-		
+
 		data=[]
 
 		translationScore = defaultdict(int)
@@ -142,7 +128,6 @@ class Translator():
 			for j in range(len(words)-count+1):
 				phrase = words[j:j+count]
 				phrase = ' '.join(phrase)
-				#print phrase
 				if phrase in tp:
 					translationPhrase = max(tp[phrase].iteritems(), key=operator.itemgetter(1))[0]
 					translationScore[count]+=tp[phrase][translationPhrase]
@@ -151,15 +136,13 @@ class Translator():
 			if translation!='':
 				translationSentence[count].append(translation)
 				phrases[count].append(translatephrase)
-				
+
 			count+=1
 
 		if len(translationScore) != 0:
 			index = max(translationScore.iteritems(), key=operator.itemgetter(1))[0]
 			finalTranslation = ' '.join(translationSentence[index])
-			# finalTranslation = finalTranslation.decode("utf-8")
 			finalTranslatePhrase = ' '.join(phrases[index])
-			# words = line.strip().encode("utf-8").split(' ')
 			words = input.strip().split(' ')
 			finalTranslationWords = finalTranslation.strip().decode("utf-8").split('% ')
 			for i, word in enumerate(words):
@@ -168,19 +151,23 @@ class Translator():
 					tmp.extend(finalTranslationWords[:i])
 					tmp.append(word + "%")
 					tmp.extend(finalTranslationWords[i:])
-					# print tmp
 					finalTranslationWords = tmp
-					# finalTranslation += " " + word
 			finalTranslation = ""
 			for word in finalTranslationWords:
 				finalTranslation += word.decode("utf-8").strip() + " "
 		else:
 			finalTranslation = input.strip().decode("utf-8")
-		
+
 		data.append(finalTranslation.strip().replace("  "," "))
 
 		return finalTranslation.strip().replace("  "," ").replace("%%","%")
-	
+
 	def romanizeHangul(self, string):
 		transliter = Transliter(academic)
 		return transliter.translit(string.decode("utf-8")).replace("-","")
+
+# t = Translator()
+# print t.translateIDKR("aku orang indonesia")
+# print t.translateKRID("나는 인도네시아")
+# print t.romanizeHangul("aa 나는 인도네시아 어이다.")
+# print t.preprocessKR("나는 인도네시아")

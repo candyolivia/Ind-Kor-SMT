@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 from polyglot.text import Text, Word
 import codecs
 import string
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-import sys 
+import sys
 import os
 
 sys.path.append(os.path.abspath(os.getcwd() + "/pebahasa"))
@@ -19,7 +19,7 @@ factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 mt = MainTagger("pebahasa/resource/Lexicon.trn", "pebahasa/resource/Ngram.trn", 0, 3, 3, 0, 0, False, 0.2, 0, 500.0, 1)
 
-with open("kbbi.txt",'r') as file:
+with open("kamus/kbbi.txt",'r') as file:
 	kbbi = [line.rstrip("\n").lower() for line in file]
 
 def getIndonesianMorphs(word):
@@ -110,10 +110,3 @@ def addLemma(string):
 		newSentence = newSentence + word + "|" + stemmer.stem(word) + " "
 	result = newSentence.strip()
 	return result
-
-# preprocessIndonesianCorpusAddPostag("eksperimen/postag/bukualkitab/testS.txt")
-# preprocessIndonesianCorpus("testingSource.txt")
-# print addPOSTAG(addLemma("keluarga berkumpul melakukan upacara penghormatan kepada nenek moyang dan memberi hormat kepada orang tua"))
-# print splitPossessiveWords("tetapi aku akan mengacungkan tangan ku dan memukul mesir dengan segala perbuatan yang ajaib yang akan ku lakukan di tengah-tengah nya sesudah itu ia akan membiarkan kamu pergi inggrisnya")
-# print addLemma("tetapi aku akan mengacungkan tangan ku dan memukul mesir dengan segala perbuatan yang ajaib yang akan ku lakukan di tengah-tengah nya sesudah itu ia akan membiarkan kamu pergi inggrisnya")
-# print splitPossessiveWords("kudus")

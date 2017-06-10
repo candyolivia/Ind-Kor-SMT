@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, make_response
 from jinja2 import Template
 from translate import Translator
+from additionalProcess import Additional
+
 app = Flask(__name__)
 
 t = Translator()
+a = Additional()
 
 ALLOWED_EXTENSIONS = set(['txt'])
 
@@ -15,21 +18,20 @@ def idkr():
 	target = ""
 	source = ""
 	romanize = ""
-	other = ""
-	translations = ""
 	if request.method == 'POST':
 		source = request.form['source']
-		preSource = t.preprocessID(source.encode("utf-8"))
-		target = t.translateIDKR(preSource.encode("utf-8")).replace("%","")
-		# other = "Other Translations:"
-		# translations = "hahahaha"
-		romanize = t.romanizeHangul(target.encode("utf-8"))
-		# print t.translateIDKR(source)
+		if source != "":
+			preSource = t.preprocessID(source.encode("utf-8"))
+			reorder = a.reorderIndonesia(preSource.encode("utf-8"))
+			try:
+				trans = a.translateReorderedIDKR(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
+			except Exception, e:
+				trans = a.translateReorderedIDKR(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
+			target = a.transIndNE(a.postTranslate(0,trans)).replace("! ! !","!")
+			romanize = t.romanizeHangul(target.encode("utf-8"))
 	language = ["ID - KR", "KR - ID"]
 	links = ["idkr", "krid"]
-
-	# method = ["Baseline", "POS Tag", "Additional", "Additional POS Tag"]
-	return render_template('idkr.html', lang = language, link = links, source = source, target = target, romanize=romanize, other = other, translations = translations)
+	return render_template('idkr.html', lang = language, link = links, source = source, target = target, romanize=romanize)
 
 @app.route('/krid', methods=['GET', 'POST'])
 def krid():
@@ -37,17 +39,18 @@ def krid():
 	source = ""
 	if request.method == 'POST':
 		source = request.form['source']
-		preSource = t.preprocessKR(source.encode("utf-8"))
-		# other = "Other Translations:"
-		# translations = "hahahaha"
-		# print t.translateKRID(source.encode("utf-8"))
-		target = t.translateKRID(preSource.encode("utf-8")).replace("%","")
-		
+		if source != "":
+			preSource = t.preprocessKR(source.encode("utf-8"))
+			reorder = a.reorderKorea(preSource.encode("utf-8"))
+			try:
+				trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
+			except Exception, e:
+				trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
+			target = a.transKorNE(a.postTranslate(1,trans))
+
 	language = ["ID - KR", "KR - ID"]
 	links = ["idkr", "krid"]
-
-	# method = ["Baseline", "POS Tag", "Additional", "Additional POS Tag"]
-	return render_template('krid.html', lang = language, link = links, source = source,  target = target, other = other, translations = translations)
+	return render_template('krid.html', lang = language, link = links, source = source,  target = target)
 
 @app.route('/document', methods=['GET', 'POST'])
 def doc():
@@ -56,31 +59,36 @@ def doc():
 	if request.method == 'POST':
 		trans = request.form['lang']
 		source = request.files['file']
-		
+
 		result = ""
 		lines = source.readlines()
-		for line in lines:
-			if trans == "idkr":
+		if trans == "idkr":
+			for line in lines:
 				preSource = t.preprocessID(line.decode("utf-8"))
-				print preSource
-				print t.translateIDKR(preSource.encode("utf-8")) + "\n"
-				result += t.translateIDKR(preSource.encode("utf-8")) + "\n"
+				reorder = a.reorderIndonesia(preSource.encode("utf-8"))
+				try:
+					trans = a.translateReorderedIDKR(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
+				except Exception, e:
+					trans = a.translateReorderedIDKR(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
+				target = a.postTranslate(0,trans)
+				result += target + "\n"
 
-			else:
+		elif trans == "krid":
+			for line in lines:
 				preSource = t.preprocessKR(line)
-				result += t.translateKRID(preSource.encode("utf-8")) + "\n"
-
-
+				reorder = a.reorderKorea(preSource.encode("utf-8"))
+				try:
+					trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
+				except Exception, e:
+					trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
+				target = a.transKorNE(a.postTranslate(1,trans))
+				result += target + "\n"
 		response = make_response(result)
 		response.headers["Content-Disposition"] = "attachment; filename=translation.txt"
 		return response
-		# target = t.translateKRID(source.encode("utf-8"))
-		# print t.translateKRID(source.encode("utf-8")).decode("utf-8")
 	language = ["ID - KR", "KR - ID"]
 	links = ["idkr", "krid"]
-
-	# method = ["Baseline", "POS Tag", "Additional", "Additional POS Tag"]
-	return render_template('doc.html', lang = language, link = links, source = source,  target = target)
+	return render_template('doc.html', lang = language, link = links)
 
 if __name__ == "__main__":
     app.run()
