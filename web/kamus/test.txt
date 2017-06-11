@@ -5814,6 +5814,9 @@ terburu-buru	급히, 서둘러서, 허둥지둥
 buruh	일꾼, 노동자, 인부
 Hari Buruh Interrnasional	세계 노동자의 날
 buruk, jelek, busuk, jahat	오래된, 나쁜, 더러운, 부패된
+Bajunya buruk	그의 옷은 낡았다
+Kayunya buruk	나무가 썩었다
+Giginya buruk	이가 썩었다
 memburukkan :	악화하다, 악화시키다, 중상하다
 tidak ada buruknya :	해를 끼치지 않은, 결점없는, 괜찮은
 Telur ini baik semua	
@@ -14542,7 +14545,7 @@ menyapi ingus	코를 풀다
 inhalasi	흡입, 흡입제
 inheren	고유의, 본래의, 타고난, 선천적인
 inhibisi	금지, 금제, 억제
-ini	이것, 여기
+ini	이, 이것, 여기
 ini pula	더구나, 게다가
 ini pula lagi	다시 한번!
 inisial	첫 글자, 머리 글자

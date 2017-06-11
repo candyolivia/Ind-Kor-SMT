@@ -336,7 +336,7 @@ class Additional():
 	def countParticle(self,filename):
 		file = open(filename, 'r')
 		output = open("err1.txt",'w')
-		particle = ["JKB","JX","JKS","JKO","JKG"]
+		particle = ["JKS","JKC","JKG","JKO","JKB","JKV","JKQ","JC","JX"]
 
 		lines = file.readlines()
 		for i, line in enumerate(lines):
