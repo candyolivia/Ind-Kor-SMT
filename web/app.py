@@ -42,11 +42,14 @@ def krid():
 		if source != "":
 			preSource = t.preprocessKR(source.encode("utf-8"))
 			reorder = a.reorderKorea(preSource.encode("utf-8"))
+			print reorder
 			try:
 				trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
 			except Exception, e:
 				trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
-			target = a.transKorNE(a.postTranslate(1,trans))
+			print trans
+			print a.postTranslate(1,trans.encode("utf-8"))
+			target = a.transKorNE(a.postTranslate(1,trans.encode("utf-8")))
 
 	language = ["ID - KR", "KR - ID"]
 	links = ["idkr", "krid"]
@@ -81,7 +84,7 @@ def doc():
 					trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").replace("%","")
 				except Exception, e:
 					trans = a.translateReorderedKRID(preSource.encode("utf-8"),reorder).replace("  ", "").decode("utf-8").replace("%","")
-				target = a.transKorNE(a.postTranslate(1,trans))
+				target = a.transKorNE(a.postTranslate(1,trans.encode("utf-8")))
 				result += target + "\n"
 		response = make_response(result)
 		response.headers["Content-Disposition"] = "attachment; filename=translation.txt"

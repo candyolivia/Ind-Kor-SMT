@@ -1735,7 +1735,7 @@ mengapakan	을 행하다
 tak apalah!, biarlah!	내버려 두라
 tidak apa-apa, tidak jadi apa	괜찮다, 아무렇지도 않다
 tidak mengapa	전혀 하지 않다
-apabila, apakala	언제, 어떤 때에
+apabila, apakala	어떤 때에, 언제
 apak	곰팡이 냄새가 나는, 곰팡이가 난
 keapakan	곰팡 핀, 곰팡내 나는, 케케묵은, 진부한
 apal, hafal	외우다, 암기하다
@@ -2406,7 +2406,6 @@ pengayaman kernajang	바구니, 바구니 세공품
 ayan	물동이
 ayan	간질병
 ayanda	아버지
-ayap, mengayap	먹다, 마시다
 ayapan	음식물
 ayaran	소매치기
 ayat	절, 단락
@@ -2722,7 +2721,6 @@ bajul	악어, 악한, 소매치기, 도둑
 bak	물동이, 대야
 bak cuci muka	세면대
 bak mandi	목욕통
-bak, tinda bak	먹
 bak, bagai, seperti	처럼, 로서
 bak	손뼉 치는 소리
 baka, kekar	영원한, 연속성이 있는, 변치 않는
@@ -3716,7 +3714,6 @@ membekam	출혈하다,  새어 나오다
 pembekaman	방혈, 사혈, 유혈
 bekantan	긴코 원숭이
 bekas	자국, 흔적, 중고의, 결과
-Ia bekas	guru
 bekas jari	지문
 bekas kaki	발자국
 bekas luka	상처 자국
@@ -4741,7 +4738,7 @@ biku	가리비모양의, 톱니 모양의
 berbiku-biku	지그자그로 되다, 톱니 모양을 한
 biku	승려, 중
 bikulturalisme	이질적인 두 문화 병존
-bila, bilamana	언제, 할 때
+bila, bilamana	할 때, 언제
 bila mungkin	가능하다면
 bila-bila	때때로, 종종
 bila saja, kapan saja	언제든지, 아무 때라도
@@ -6432,7 +6429,6 @@ carter	특허장, 면허장, 헌장
 mencarter	특허장을 주다, 면허하다
 pesawat carteran	전세기
 caruk	탐식하는, 게걸스럽게 먹는
-mencaruk	먹다
 caruk	칼 자국
 carut	외설한, 추잡한
 carut marut	음란한 말
@@ -7162,7 +7158,6 @@ chrysant	국화, 국화속
 ci	아편의 중량 단위
 ciak	지저귐
 berciak	지저귀다
-ciak	먹다
 ciaka	맨발의
 ciami	풍채 좋은, 잘 생긴, 아름다운, 고운
 ciami	좋은 품질의
@@ -7798,7 +7793,6 @@ berdaham	목을 가다듬다
 dahan	가지
 patah dahan	부러진 가지
 dahan, pendahan	투창
-dahar, mendahar	먹다, 마시다
 dahi	이마, 앞머리, 앞부분, 앞쪽
 dahi luas	넓은 이마
 dahi sehari bulan	잘 생긴 이마
@@ -9553,7 +9547,6 @@ elung, lung	관
 elus, mengelus	쓰다듬다, 어루만지다, 양보하다
 elusan	애무
 email	에나멜, 광택제
-emam	먹다
 emang, paman	아저씨
 emang, memang	물론, 아마도
 emansipasi	해방, 이탈
@@ -13077,7 +13070,7 @@ hari sabat	안식일
 harian	매일의, 일상의, 일당으로 하는, 일간 신문
 harian lepas	일용사원
 harian, keseharian	날마다의, 일간신문, 매일의
-harini, hari ini	오늘, 현재
+hari ini	오늘, 현재
 sehari suntuk	종일, 하루 종일
 seharian, sehari-harian	종일토록, 하루 종일
 sehari-hari	날마다
@@ -14971,7 +14964,7 @@ isu	발행, 나옴, 문제
 isu, desas-desus	헛소문, 유언비어
 mengisukan	유언비어를 퍼뜨리다
 isut, ingsut	떠밀다
-isya	저녁, 일몰 후
+isya	일몰 후
 isyarat	암시, 신호, 암호
 bahasa isyarat	몸짓으로 하는 말, 바디랭기지
 mengisyaratkan	신호하다, 암시하다, 유인하다
@@ -21430,7 +21423,6 @@ lahiriah, lahirnya, tampaknya	물질의, 물질적인, 외견상, 겉으로는
 laici	잎이 작고 노란 과일
 Ia ilaha illa Ilahu	알라 이외에는 신이 없다
 lailat-ul-kadar	계시의 밤
-lailah, lailat	밤, 저녁
 laif, melaifkan	묽게 하다, 약하게 하다
 pelaifan	희박한, 가는, 얇은, 약한
 lain	다른, 딴, 별개의, 서로 다른
@@ -35936,7 +35928,7 @@ sediaan	준비, 저장, 재고품, 예비품
 tersedia, disediakan	준비된, 이용할 수 있는, 쓸모 있는
 sedia, sedianya	처음에, 아까, 해야 하다
 sedianya  tetapi 	은 사실이지만 그러나
-sediakala	이전의, 과거의, 을, 언제나, 마다
+sediakala	이전의, 과거의, 언제나, 마다
 sedih	슬픈, 비극적인, 비참한
 bersedih	슬퍼하다
 kesedihan	불행, 비참, 슬픔, 비애, 고독

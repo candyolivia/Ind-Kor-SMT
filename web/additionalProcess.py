@@ -196,6 +196,7 @@ class Additional():
 	def translateKorNgram(self,string,n,start):
 		string += " "
 		words = string.split(" ")
+		print words
 		while len(words) > n and start < (len(words)-n):
 			words = string.split(" ")
 			ngram = ""
@@ -246,6 +247,7 @@ class Additional():
 			if start is not None:
 				for i in reversed(range(3)):
 					sentence = self.translateKorNgram(sentence,i,start)
+			print sentence
 			return self.transAddKRVerb(sentence).encode("utf-8")
 
 	def deleteParticle(self,sentence):
@@ -292,7 +294,7 @@ class Additional():
 		return result.strip()
 
 	def transKorNE(self,sentence):
-		tags = ["NNP"]
+		tags = ["NNP","NNG"]
 		postaggedSentence = self.addPOSTAGKorea(sentence.strip())
 		units = postaggedSentence.split(" ")
 		result = ""
@@ -413,6 +415,7 @@ class Additional():
 		words = sentence.strip().split(" ")
 		postag = self.getOnlyPostagKR(sentence.strip())
 		order = "-1"
+		print postag
 		if postag in self.krtags:
 			order = self.krorders[self.krtags.index(postag)]
 
@@ -452,11 +455,11 @@ class Additional():
 		t = Translator()
 		phrases =  re.findall("\((.*?)\)", reorderedSentence)
 		result = ""
-		if len(t.translateIDKR(inp).split("%")) <= 1:
-			result = t.translateIDKR(inp).strip()
+		if len(t.translateKRID(inp).split("%")) <= 1:
+			result = t.translateKRID(inp).strip()
 		else:
 			if reorderedSentence.find("(") == -1:
-				result = t.translateIDKR(reorderedSentence).strip()
+				result = t.translateKRID(reorderedSentence).strip()
 			else:
 				for phrase in phrases:
 					trans = t.translateKRID(phrase)

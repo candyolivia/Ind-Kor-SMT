@@ -2565,7 +2565,6 @@ tv 에서 경찰 프로 는 많이 봤었 는데요	aku sudah banyak nonton acar
 산 에서	di gunung	0.0
 내 생 에 최고 의 15 분 이 었 던 것 같 아요	15 menit terhebat dalam hidup ku	0.0
 제	nya saya	-0.69314718056
-저	nya saya	-0.69314718056
 농구 선수 예요	saya adalah atlet basket	0.0
 저 도 거기 에서 했 는데 수수료 가 별로 안 들 었 어요	saya juga menukar uang di sana dan biaya nya tidak begitu mahal	-0.69314718056
 저 도 거기 에서 했 는데 수수료 가 별로 안 들 었	saya juga menukar uang di sana dan biaya nya tidak begitu mahal	-0.69314718056
@@ -10296,7 +10295,7 @@ cctv 찾 아 봤 지요	aku melihat cctv	0.0
 하하  철수 너 는  괜찮 아	haha  bagaimana cheolsu  kamu baik-baik saja	0.0
 우리 동네 는 안전 해서 좋 아요	saya suka lingkungan sekitar disini karena aman	0.0
 이런 쓰레기 는 작업장 에서 정한 방법 으로 처리 를 해야 합니다	sampah-sampah seperti ini harus diproses sesuai dengan cara yang ditentukan oleh tempat kerja	0.0
-저	ada saya	0.0
+저	saya	0.0
 게임 을 했	bermain game	-1.60943791243
 게임 했	bermain game	-1.60943791243
 게임	bermain game	-1.60943791243
@@ -14843,7 +14842,6 @@ tv 에서 경찰 프로	polisi di tv	0.0
 변호사	pengacara	0.0
 음식 남기 지 말	jangan menyisakan makanan	0.0
 잘 잤 어요	apakah anda juga tidur nyenyak	0.0
-저	apa aku	0.0
 철 의 위장 을 가졌 거든요 저	kan punya perut karet	0.0
 와 티 씨 는 올해 스무 살 입니다	tahun ini wati berumur 20 tahun	0.0
 찾 았 다 코난 의 헨드 폰	aku menemukan hp conan	0.0
@@ -16918,7 +16916,7 @@ dvd  tv 쇼 에 나오 는 양반 몰라	pertunjukan dvd  tv kamu tahu	0.0
 어제 밤 에 야구 경기 봤 어	apakah kamu menonton pertandingan baseball semalam	0.0
 엄마 를 쏙 빼닮 아 예쁘 던 내 얼굴 은  좀 많이 섭섭 한 외모 의 소유자 인 아빠 께 물려받 은 유전 자각	dan wajah cantik ku yang diambil dari ibuku  dengan ayah ku yang dna tidak begitu tampan	0.0
 저 는 에디 입니다	saya adalah edi	-0.69314718056
-은 에디 입니다	saya adalah edi	-0.69314718056
+에디 입니다	saya adalah edi	-0.69314718056
 친구 와 함께 공부 해요	belajar bersama teman tersebut	0.0
 지 는 반말 이 고	aku sangat berterima kasih pada mu	0.0
 아사쿠라 도지사 님	gubernur asakura	0.0
@@ -24180,7 +24178,7 @@ b 513	b-5-13	0.0
 친구 를 사귀 고 싶 은데	ingin berteman dengan orang	0.0
 업무 용 출입구 로 가 서 위험 하 지만 멋지 기 도 한 레이저 관문 을 지난다	kita mengantri ke antrian kapal agar menghindari gerbang laser yang mematikan sekaligus keren	0.0
 은 내	itu adalah	-0.69314718056
-입니다	itu adalah	-0.69314718056
+입니다	adalah	-0.69314718056
 사랑 해	aku cinta kamu	0.0
 치즈 랑 사과 를 먹 어 봤	pernah makan keju dan apel	0.0
 알 았 어요  조심 할 테 니까 걱정 하 지 마세요  수진 씨	oke  saya akan berhati-hati jangan khawatir  sujin	0.0
@@ -24731,7 +24729,7 @@ b 513	b-5-13	0.0
 나	ku  aku	0.0
 별 말씀 을 요	sudahlah	-0.69314718056
 랄까	sudahlah	-0.69314718056
-저	nya  saya	0.0
+저	saya	0.0
 여기	mu di sini	0.0
 만 전화 끊 을 테 니까 어서 오 세요	aku akan menutup nya sekarang jadi tolong datang	0.0
 그냥 평범 한 작 은 트릭 처럼 카드 에 싸인 을 했 어요  그리고	menandatangani kartu agar terlihat seperti trik biasa  dan	0.0
@@ -27860,8 +27858,6 @@ cctv 찾 아 봤 지요	melihat cctv nya	0.0
 기온 은 높 지만	meskipun suhu nya tinggi tetapi	0.0
 우리 는 저녁 을 맛있 게 먹 고 이야기 를 나눴 습니다	kami sangat menikmati makan malam dan mengobrol bersama	0.0
 우리 회사 직원 들 이 오랜만 에	setelah sekian lama akhir nya para karyawan di kantor kami	0.0
-은	saya adalah	-0.69314718056
-입니다	saya adalah	-0.69314718056
 와인 한잔 씩 들 하 시 겠 소	kau yakin tak ingin segelas anggur	0.0
 크기 별 로 분류 해서 따로	dengan memisahkan sesuai dbesar kecil nya barang	0.0
 집 에 가 서 저녁 을 먹 고 쉬 었 어요	setelah pulang ke rumah  saya makan malam  kemudian beristirahat	-0.69314718056
